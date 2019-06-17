@@ -10,10 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: |
-    cmake
-  displayName: 'cmake'
+- task: CMake@1
+  inputs:
+    cmakeArgs: 
 
 - script: |
-    make
+    cd build && make
   displayName: 'make'
